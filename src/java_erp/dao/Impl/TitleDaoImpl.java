@@ -34,7 +34,7 @@ public class TitleDaoImpl implements TitleDao {
 			while (rs.next()) {
 				list.add(getTitle(rs));
 			}
-		} catch (SQLException e) {
+		} catch (SQLException e) {          
 			System.err.println("sql 문법 오류 sql check하세요!!");
 			e.printStackTrace();
 		}
