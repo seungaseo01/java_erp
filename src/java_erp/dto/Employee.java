@@ -1,0 +1,87 @@
+package java_erp.dto;
+
+public class Employee {// 테이블명과 동일하게맞춰주는것이 좋다.
+	private int empNo;
+	private String empName;
+	private Title title;
+	private Employee manager;
+	private int salary;
+	private Department dept;
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(int empNo) {
+		this.empNo = empNo;
+	}
+
+	public Employee(int empNo, String empName, Title title, Employee manager, int salary, Department dept) {
+		this.empNo = empNo;
+		this.empName = empName;
+		this.title = title;
+		this.manager = manager;
+		this.salary = salary;
+		this.dept = dept;
+	}
+
+	public int getEmpNo() {
+		return empNo;
+	}
+
+	public void setEmpNo(int empNo) {
+		this.empNo = empNo;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public Title getTitle() {
+		return title;
+	}
+
+	public void setTitle(Title title) {
+		this.title = title;
+	}
+
+	public Employee getManager() {
+		return manager;
+	}
+
+	public void setManager(Employee manager) {
+		this.manager = manager;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("[empNo = %s empName = %s title = %s manager = %s salary = %s dept = %s]"
+								, empNo
+								, empName
+								, title == null? "null" : title.gettNo()
+								, manager == null ? "null" : manager.getEmpNo()// 이성래는 null이기 때문
+								, salary
+								, dept == null ? "null" : dept.getDeptNo());// dept가 없으면 에러
+	}
+
+}

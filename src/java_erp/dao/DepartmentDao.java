@@ -7,9 +7,9 @@ import java_erp.dto.Title;
 
 public interface DepartmentDao {	
 	ArrayList<Department> selectDepartmentByAll();
-	Title selectTitleByNo(Department department);
+	Department selectDepartmentByNo(Department department);
 
-	int insertTitle(Department department);
-	int updateTitle(Department department);
-	int deleteTitle(Department department);
+	int insertDepartment(Department department);
+	int updateDepartment(Department department);
+	int deleteDepartment(Department department);
 }
