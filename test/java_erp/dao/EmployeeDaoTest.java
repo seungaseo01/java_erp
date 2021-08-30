@@ -36,7 +36,9 @@ public class EmployeeDaoTest {
 	@Test
 	public void testSelectEmployeeByNo() {
 		System.out.println("testSelectEmployeeByNo()");
-		Employee employee = dao.selectEmployeeByNo(new Employee(0));
+		Employee selectEmp = dao.selectEmployeeByNo(new Employee(4377)); 
+		Assert.assertNotNull(selectEmp); 
+		System.out.println(selectEmp); 
 
 		
 	}
